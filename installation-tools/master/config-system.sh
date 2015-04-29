@@ -7,6 +7,10 @@ mv /etc/hadoop/conf/yarn-site.xml /etc/hadoop/conf/yarn-site.xml.bak
 wget http://DX2/DX3-conf/yarn-site.xml -O /etc/hadoop/conf/yarn-site.xml
 mv /etc/hadoop/conf/mapred-site.xml /etc/hadoop/conf/mapred-site.xml.bak
 wget http://DX2/DX3-conf/mapred-site.xml -O /etc/hadoop/conf/mapred-site.xml
+mv /etc/hadoop/conf/fair-scheduler.xml /etc/hadoop/conf/fair-scheduler.xml.bak
+wget http://DX2/DX3-conf/fair-scheduler.xml -O /etc/hadoop/conf/fair-scheduler.xml
+mv /etc/hadoop/conf/hadoop-env.sh /etc/hadoop/conf/hadoop-env.sh.bak
+wget http://DX2/DX3-conf/hadoop-env.sh -O /etc/hadoop/conf/hadoop-env.sh
 mv /etc/hbase/conf/hbase-site.xml /etc/hbase/conf/hbase-site.xml.bak
 wget http://DX2/DX3-conf/hbase-site.xml -O /etc/hbase/conf/hbase-site.xml
 mv /etc/zookeeper/conf/zoo.cfg /etc/zookeeper/conf/zoo.cfg.bak

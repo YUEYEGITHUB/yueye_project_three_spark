@@ -68,7 +68,7 @@
   </property>
   <property>
     <name>mapreduce.task.io.sort.mb</name>
-    <value>256</value>
+    <value>30</value>
   </property>
   <property>
     <name>mapreduce.map.speculative</name>
@@ -100,7 +100,7 @@
   </property>
   <property>
     <name>yarn.app.mapreduce.am.resource.mb</name>
-    <value>1024</value>
+    <value>200</value>
   </property>
   <property>
     <name>yarn.app.mapreduce.am.resource.cpu-vcores</name>
@@ -112,19 +112,19 @@
   </property>
   <property>
     <name>yarn.app.mapreduce.am.command-opts</name>
-    <value>-Djava.net.preferIPv4Stack=true -Xmx825955249</value>
+    <value>-Djava.net.preferIPv4Stack=true -Xmx100m</value>
   </property>
   <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Djava.net.preferIPv4Stack=true -Xmx825955249</value>
+    <value>-Djava.net.preferIPv4Stack=true -Xmx100m</value>
   </property>
   <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Djava.net.preferIPv4Stack=true -Xmx825955249</value>
+    <value>-Djava.net.preferIPv4Stack=true -Xmx100m</value>
   </property>
   <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>1024</value>
+    <value>200</value>
   </property>
   <property>
     <name>mapreduce.map.cpu.vcores</name>
@@ -132,7 +132,7 @@
   </property>
   <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>1024</value>
+    <value>200</value>
   </property>
   <property>
     <name>mapreduce.reduce.cpu.vcores</name>

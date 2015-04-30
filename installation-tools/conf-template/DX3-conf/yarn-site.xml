@@ -44,15 +44,15 @@
   </property>
   <property>
     <name>yarn.scheduler.minimum-allocation-mb</name>
-    <value>1024</value>
+    <value>50</value>
   </property>
   <property>
     <name>yarn.scheduler.increment-allocation-mb</name>
-    <value>512</value>
+    <value>50</value>
   </property>
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>1024</value>
+    <value>10000</value>
   </property>
   <property>
     <name>yarn.scheduler.minimum-allocation-vcores</name>
@@ -121,6 +121,10 @@
   <property>
     <name>yarn.resourcemanager.max-completed-applications</name>
     <value>10000</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>1200</value>
   </property>
   <property>
     <name>yarn.nodemanager.aux-services</name>

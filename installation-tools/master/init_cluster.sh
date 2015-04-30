@@ -8,6 +8,8 @@ for host in `cat h.slaves`; do
   ssh $host chown hdfs /mnt/dfs_data
   ssh $host mkdir /mnt/mapred_local
   ssh $host chown mapred /mnt/mapred_local
+  ssh $host mkdir /mnt/nm_local
+  ssh $host chown yarn /mnt/nm_local
 done
 
 sudo -u hdfs hadoop namenode -format

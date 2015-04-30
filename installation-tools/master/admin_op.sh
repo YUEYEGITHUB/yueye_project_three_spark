@@ -1,12 +1,22 @@
 #!/bin/sh
 
+if [ $# = 0 ]; then
+    echo " please input user id ..."
+    exit
+fi
+
 bin=`dirname "$0"`
+userid="$1"
+/bin/hostname $userid-1
 export bin=`cd "$bin"; pwd`
-
+prefix=$userid
 sh $bin/change_DX_conf.sh
+sh $bin/init_local_hosts.sh
+sh $bin/config_ssh.sh
+sh $bin/config-hostname.sh
 
-for host in `cat /root/master/h.slaves`; do
-  ssh $host wget http://10.110.64.132/hosts -O /etc/hosts.new
+for host in `cat $bin/h.slaves`; do
+  ssh $host wget http://119.81.131.242/hosts -O /etc/hosts.new
   ssh $host mv /etc/hosts.new /etc/hosts
   ssh $host wget http://DX2/cloudera-cdh5.repo -O /etc/yum.repos.d/cloudera-cdh5.repo
   /usr/sbin/ntpdate 133.100.11.8

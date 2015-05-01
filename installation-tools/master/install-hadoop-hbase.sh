@@ -5,7 +5,7 @@ for host in `cat h.slaves`; do
 done
 
 for host in `cat h.master`; do
- ssh $host yum install hadoop-yarn-resourcemanager hadoop-hdfs-namenode hbase-master -y
+ ssh $host yum install hadoop-yarn-resourcemanager hadoop-mapreduce-historyserver hadoop-hdfs-namenode hbase-master -y
 done
 
 for host in `cat h.secondarynamenode`; do

@@ -140,7 +140,7 @@
   </property>
   <property>
     <name>yarn.nodemanager.remote-app-log-dir</name>
-    <value>hdfs://DX3:8020/tmp/yarn-log</value>
+    <value>hdfs://DX3-1:8020/tmp/yarn-log</value>
   </property>
   <property>
      <name>yarn.app.mapreduce.am.staging-dir</name>

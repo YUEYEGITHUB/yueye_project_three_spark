@@ -4,7 +4,7 @@ yum install expect -y
 
 auto_ssh_copy_id() {
   local HOST=$1
-  local PASSWD="hadoopchina213"
+  local PASSWD="abcdefg"
   expect -c "set timeout -1;
     spawn ssh-copy-id -i /root/.ssh/id_rsa.pub root@$HOST
     expect {

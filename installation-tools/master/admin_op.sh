@@ -10,8 +10,8 @@ userid="$1"
 /bin/hostname $userid-1
 export bin=`cd "$bin"; pwd`
 prefix=$userid
-export remote_ip=119.81.131.242
-sh $bin/change_DX_conf.sh
+export remote_ip=112.74.102.117
+sh $bin/change_DX_conf.sh $prefix
 sh $bin/init_local_hosts.sh
 sh $bin/config_ssh.sh
 sh $bin/config-hostname.sh

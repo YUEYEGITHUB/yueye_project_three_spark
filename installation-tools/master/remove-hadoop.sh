@@ -1,6 +1,6 @@
 #!/bin/sh
-
-cd /root/master
+bin=`dirname "$0"`
+cd $bin
 
 for host in `cat h.slaves`; do
  ssh $host yum erase zookeeper hadoop hbase  -y

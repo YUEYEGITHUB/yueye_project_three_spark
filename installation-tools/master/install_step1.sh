@@ -1,7 +1,8 @@
 #!/bin/sh
 
-cd /root/master
+bin=`dirname "$0"`
 
+cd $bin
 sh install-hadoop-hbase.sh
 sh config-system.sh
 sh init_cluster.sh

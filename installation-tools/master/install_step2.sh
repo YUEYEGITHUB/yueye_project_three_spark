@@ -1,6 +1,7 @@
 #!/bin/sh
+bin=`dirname "$0"`
 
-cd /root/master
+cd $bin
 sh init_hdfs.sh
 sh start_yarn.sh
 sh start_hbase.sh

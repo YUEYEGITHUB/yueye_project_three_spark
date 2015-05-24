@@ -2,7 +2,10 @@
 
 bin=`dirname "$0"`
 bin=`cd "$bin"; pwd`
+i=0;
 for host in `cat $bin/h.slaves`; do
-  ssh $host hostname $host
-  ssh $host 'sed -i -r "s/(HOSTNAME *= *).*/\1'$host'/" /etc/sysconfig/network'
+  i=`expr $i + 1`;
+  name=$prefix-$i
+  ssh $host hostname $name
+  ssh $host 'sed -i -r "s/(HOSTNAME *= *).*/\1'$name'/" /etc/sysconfig/network'
 done

@@ -31,6 +31,10 @@
     <value>DX3-1:8088</value>
   </property>
   <property>
+    <name>yarn.log.server.url</name>
+    <value>http://DX3-1:19888/history/logs</value>
+  </property>
+  <property>
     <name>yarn.resourcemanager.client.thread-count</name>
     <value>50</value>
   </property>

@@ -19,4 +19,4 @@ auto_ssh_copy_id() {
 while read line; do
   echo "$line"
   auto_ssh_copy_id "$line"
-done < h.slaves
+done < h.hosts

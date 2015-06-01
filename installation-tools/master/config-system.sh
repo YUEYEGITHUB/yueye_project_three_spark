@@ -16,6 +16,11 @@ wget http://DX2/DX3-conf/hbase-site.xml -O /etc/hbase/conf/hbase-site.xml
 mv /etc/zookeeper/conf/zoo.cfg /etc/zookeeper/conf/zoo.cfg.bak
 wget http://DX2/DX3-conf/zoo.cfg -O /etc/zookeeper/conf/zoo.cfg
 
+prefix=`cat ./userid.private`
+sed -i "s/DX3/$prefix/g" /etc/hadoop/conf/*
+sed -i "s/DX3/$prefix/g" /etc/hbase/conf/*
+sed -i "s/DX3/$prefix/g" /etc/zookeeper/conf/*
+
 for host in `cat h.slaves`; do
   rsync /etc/hadoop/conf/core-site.xml $host:/etc/hadoop/conf/core-site.xml
   rsync /etc/hadoop/conf/hdfs-site.xml $host:/etc/hadoop/conf/hdfs-site.xml

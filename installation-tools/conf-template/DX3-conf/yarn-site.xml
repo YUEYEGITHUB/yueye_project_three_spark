@@ -11,24 +11,32 @@
     <value>*</value>
   </property>
   <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>DX3-1</value>
+  </property>
+  <property>
     <name>yarn.resourcemanager.address</name>
-    <value>DX3-1:8032</value>
+    <value>${yarn.resourcemanager.hostname}:8032</value>
   </property>
   <property>
     <name>yarn.resourcemanager.admin.address</name>
-    <value>DX3-1:8033</value>
+    <value>${yarn.resourcemanager.hostname}:8033</value>
   </property>
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
-    <value>DX3-1:8030</value>
+    <value>${yarn.resourcemanager.hostname}:8030</value>
   </property>
   <property>
     <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>DX3-1:8031</value>
+    <value>${yarn.resourcemanager.hostname}:8031</value>
   </property>
   <property>
     <name>yarn.resourcemanager.webapp.address</name>
-    <value>DX3-1:8088</value>
+    <value>${yarn.resourcemanager.hostname}:8088</value>
+  </property>
+  <property>
+    <name>yarn.log.server.url</name>
+    <value>http://DX3-1:19888/history/logs</value>
   </property>
   <property>
     <name>yarn.resourcemanager.client.thread-count</name>

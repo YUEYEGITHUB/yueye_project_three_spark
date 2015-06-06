@@ -16,6 +16,8 @@ sh $bin/config_ssh.sh
 sh $bin/config-hostname.sh
 for host in `cat $bin/h.slaves`; do
   ssh $host wget http://$remote_ip/cloudera-cdh5-myself.repo -O /etc/yum.repos.d/cloudera-cdh5-myself.repo
+  ssh $host wget http://$remote_ip/cloudera-gplextras5-myself.repo -O /etc/yum.repos.d/cloudera-gplextras5-myself.repo
+
   /usr/sbin/ntpdate 133.100.11.8
   ssh $host wget http://$remote_ip/ntpsync -O /etc/cron.hourly/ntpsync
   chmod +x /etc/cron.hourly/ntpsync

@@ -5,12 +5,12 @@ export datadir=$bin/../data
 export data=$datadir/SogouQ.reduced
 
 export generateddir=$datadir/generated
-rm -rf $generateddir
+rm -rf $generateddir/*
 mkdir $generateddir
 echo genrateddir is $generateddir
-i=1
+i=0
 surfix="20150601"
-while(($i<100))
+while(($i<2))
 do
   echo generate the $i file.
   sleep 5
